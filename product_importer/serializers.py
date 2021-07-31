@@ -6,22 +6,22 @@ from .models import Products
 from django.contrib.auth.models import User
 
 
-class ReadUserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ("id","username","first_name","last_name")
-        ReadOnlyField = fields
+# class ReadUserSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = User
+#         fields = ("id","username","first_name","last_name")
+#         ReadOnlyField = fields
 
 class WirteProductSerializer(serializers.ModelSerializer):
-    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    # user = serializers.HiddenField(default=serializers.CurrentUserDefault())
     class Meta:
         model = Products
-        fields = ("user","name","sku_id","description","is_active")
+        fields = ("name","sku_id","description","is_active")
     
 
 class ReadProductSerializer(serializers.ModelSerializer):
-    user = ReadUserSerializer()
+    # user = ReadUserSerializer()
     class Meta:
         model = Products
-        fields = ("id","name","sku_id","description","is_active","user")
+        fields = ("id","name","sku_id","description","is_active")
         ReadOnlyField = fields 
