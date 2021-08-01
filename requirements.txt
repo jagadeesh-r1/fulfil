@@ -1,6 +1,8 @@
 djangorestframework
+django-heroku
 django-filter
 sqlalchemy
+requests
 gunicorn
 celery
 pandas
