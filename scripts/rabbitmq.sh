@@ -24,7 +24,6 @@ sudo tee /etc/apt/sources.list.d/rabbitmq.list <<EOF
 ## See the release to distribution mapping table in RabbitMQ doc guides to learn more.
 deb http://ppa.launchpad.net/rabbitmq/rabbitmq-erlang/ubuntu bionic main
 deb-src http://ppa.launchpad.net/rabbitmq/rabbitmq-erlang/ubuntu bionic main
-
 ## Provides RabbitMQ
 ##
 ## "bionic" as distribution name should work for any reasonably recent Ubuntu or Debian release.

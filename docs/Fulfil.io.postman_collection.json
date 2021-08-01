@@ -12,32 +12,19 @@
 					"name": "List Products",
 					"request": {
 						"auth": {
-							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "Token {{access_token}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "Authorization",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/products/?ordering=-is_active",
+							"raw": "http://20.198.112.178/products/",
 							"protocol": "http",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"20",
+								"198",
+								"112",
+								"178"
 							],
-							"port": "8000",
 							"path": [
 								"products",
 								""
@@ -64,7 +51,8 @@
 								{
 									"key": "ordering",
 									"value": "-is_active",
-									"description": "can order on (\"sku_id\",\"is_active\") fields"
+									"description": "can order on (\"sku_id\",\"is_active\") fields",
+									"disabled": true
 								}
 							]
 						}
@@ -75,35 +63,22 @@
 					"name": "Retrieve Product",
 					"request": {
 						"auth": {
-							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "Token {{access_token}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "Authorization",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/products/49/",
+							"raw": "http://20.198.112.178/products/4945/",
 							"protocol": "http",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"20",
+								"198",
+								"112",
+								"178"
 							],
-							"port": "8000",
 							"path": [
 								"products",
-								"49",
+								"4945",
 								""
 							]
 						}
@@ -114,25 +89,13 @@
 					"name": "Edit Product",
 					"request": {
 						"auth": {
-							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "Token {{access_token}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "Authorization",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"Jadfcdfsdfsdfkydf\",\n    \"sku_id\":\"111111\",\n    \"description\":\"gives no afshit\"\n}",
+							"raw": "{\n    \"name\":\"Jadfcdfsaasdasddafsdfkydf\",\n    \"sku_id\":\"1111assfzdfdzfasdfafcac11\",\n    \"description\":\"gives no afshit\",\n    \"is_active\":1\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -140,18 +103,17 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/products/1/",
+							"raw": "http://20.198.112.178/products/3981114/",
 							"protocol": "http",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"20",
+								"198",
+								"112",
+								"178"
 							],
-							"port": "8000",
 							"path": [
 								"products",
-								"1",
+								"3981114",
 								""
 							]
 						}
@@ -176,15 +138,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/products/",
+							"raw": "http://20.198.112.178/products/",
 							"protocol": "http",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"20",
+								"198",
+								"112",
+								"178"
 							],
-							"port": "8000",
 							"path": [
 								"products",
 								""
@@ -197,35 +158,22 @@
 					"name": "Delete Product",
 					"request": {
 						"auth": {
-							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "Token {{access_token}}",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "Authorization",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/products/48/",
+							"raw": "http://20.198.112.178/products/50/",
 							"protocol": "http",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"20",
+								"198",
+								"112",
+								"178"
 							],
-							"port": "8000",
 							"path": [
 								"products",
-								"48",
+								"50",
 								""
 							]
 						}
@@ -240,9 +188,35 @@
 				{
 					"name": "Upload CSV",
 					"request": {
-						"method": "GET",
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
 						"header": [],
-						"url": null
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/jagadeesh/Downloads/products.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://20.198.112.178/upload/",
+							"protocol": "http",
+							"host": [
+								"20",
+								"198",
+								"112",
+								"178"
+							],
+							"path": [
+								"upload",
+								""
+							]
+						}
 					},
 					"response": []
 				}

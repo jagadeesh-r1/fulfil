@@ -6,12 +6,6 @@ from django.contrib.auth.models import User
 from rest_framework.fields import ReadOnlyField
 
 
-# class ReadUserSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = User
-#         fields = ("id","username","first_name","last_name")
-#         ReadOnlyField = fields
-
 class WirteProductSerializer(serializers.ModelSerializer):
     # user = serializers.HiddenField(default=serializers.CurrentUserDefault())
     class Meta:
