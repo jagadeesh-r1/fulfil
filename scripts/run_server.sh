@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ubuntu/vdezi_ai_recommendation_service    #relace service_repowith  your repo name 
+cd /home/ubuntu/    #relace service_repowith  your repo name 
 
 git stash
 

@@ -51,7 +51,7 @@ StartLimitIntervalSec=0
 [Service]
 Type=simple
 Environment=DEPLOY_ENV=prod
-ExecStart=/home/ubuntu/vdezi_ai_recommendation_service/scripts/run_server.sh
+ExecStart=/home/ubuntu/{}/scripts/run_server.sh
 RemainAfterExit=no
 Restart=on-failure
 RestartSec=5s
