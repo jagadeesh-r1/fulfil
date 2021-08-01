@@ -1,16 +1,10 @@
 #!/bin/bash
 
-cd /home/ubuntu/    #relace service_repowith  your repo name 
-
-git stash
-
-git pull origin master
-
-source ./venv/bin/activate
+cd /home/azureuser/fulfil/    #relace service_repowith  your repo name 
 
 pip3 install -r requirements.txt
 
-python3 serve.py
+python3 manage.py runserver & celery -A fulfil worker -l INFO && kill $!
 
 
 
