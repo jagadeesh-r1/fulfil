@@ -1,6 +1,6 @@
 djangorestframework
 django-filter
-sqlalcemy
+sqlalchemy
 gunicorn
 celery
 pandas
