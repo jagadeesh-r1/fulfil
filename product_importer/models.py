@@ -1,8 +1,5 @@
-from django.db import models
 import random
-from django.contrib.auth.models import User
-
-from django.db.models.expressions import Value
+from django.db import models
 
 # Create your models here.
 class Products(models.Model):

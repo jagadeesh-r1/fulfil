@@ -1,8 +1,10 @@
-from celery import shared_task
-from .models import Products
-from django.db import transaction
+import requests
 import pandas as pd
+from .models import Products
+from celery import shared_task
+from django.db import transaction
 
+webhook_urls = []
 
 @shared_task
 def add_data_to_db(reader):
@@ -21,3 +23,9 @@ def add_data_to_db(reader):
 
     with transaction.atomic():
         Products.objects.bulk_create(objs,ignore_conflicts=True)
+
+@shared_task
+def send_triggers():
+    # print(webhook_urls)
+    for i in webhook_urls:
+        print(requests.post(i,{}))
