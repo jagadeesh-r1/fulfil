@@ -1,2 +1,6 @@
 djangorestframework
 django-filter
+sqlalcemy
+gunicorn
+celery
+pandas
