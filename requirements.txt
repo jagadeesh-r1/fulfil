@@ -1,4 +1,5 @@
 djangorestframework
+django-heroku
 django-filter
 sqlalchemy
 gunicorn
